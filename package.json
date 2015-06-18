@@ -1,6 +1,6 @@
 {
   "name": "language-mongodb",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MongoDB language support in Atom.",
   "keywords": [
     "language",
@@ -23,6 +23,5 @@
   "bugs": {
     "url": "https://github.com/Calyhre/atom-language-mongodb/issues"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
