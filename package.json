@@ -1,0 +1,28 @@
+{
+  "name": "language-mongodb",
+  "version": "0.1.0",
+  "description": "MongoDB language support in Atom.",
+  "keywords": [
+    "language",
+    "mongo",
+    "mongodb"
+  ],
+  "author": "Charley David <calyhre@gmail.com>",
+  "contributors": [
+    "Kris Molendyke <kris@visibiz.com>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "http://atom.github.io/language-mongodb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Calyhre/atom-language-mongodb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Calyhre/atom-language-mongodb/issues"
+  },
+  "dependencies": {
+  }
+}

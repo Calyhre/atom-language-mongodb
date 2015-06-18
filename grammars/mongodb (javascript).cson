@@ -1,0 +1,59 @@
+comment: "Created by Kris Molendyke"
+fileTypes: [
+  "js"
+]
+foldingStartMarker: "^.*\\bfunction\\s*(\\w+\\s*)?\\([^\\)]*\\)(\\s*\\{[^\\}]*)?\\s*$"
+foldingStopMarker: "^\\s*\\}"
+name: "mongoDB (JavaScript)"
+patterns: [
+  {
+    begin: "\\{"
+    end: "\\}"
+    patterns: [
+      {
+        include: "#keywords"
+      }
+      {
+        include: "#rawKeys"
+      }
+      {
+        include: "#singleQuotedKeys"
+      }
+      {
+        include: "#doubleQuotedKeys"
+      }
+      {
+        include: "#singleQuotedVals"
+      }
+      {
+        include: "#doubleQuotedVals"
+      }
+      {
+        include: "source.js"
+      }
+    ]
+  }
+  {
+    include: "source.js"
+  }
+]
+repository:
+  doubleQuotedKeys:
+    match: "\"\\w+(\\.\\w+)*\""
+    name: "string.quoted.double.js.mongodb"
+  doubleQuotedVals:
+    match: "\"\\w+(\\.\\w+)*\""
+    name: "string.quoted.double.js.mongodb"
+  keywords:
+    match: "\\$(gt|lt|in|nin|all|mod|exists|type|elemMatch|not|where|or|inc|set|unset|push|pushAll|addToSet|each|pop|pull|pullAll|size|ne|gte|lte)\\s*:"
+    name: "keyword.operator.js.mongodb"
+  rawKeys:
+    match: "\\w+(\\.\\w+)*\\s*:"
+    name: "keyword.other.js.mongodb"
+  singleQuotedKeys:
+    match: "'\\w+(\\.\\w+)*'"
+    name: "string.quoted.single.js.mongodb"
+  singleQuotedVals:
+    match: "'\\w+(\\.\\w+)*'"
+    name: "string.quoted.single.js.mongodb"
+scopeName: "source.js.mongodb"

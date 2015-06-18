@@ -1,0 +1,91 @@
+".source.js.mongodb":
+  Query:
+    prefix: ":"
+    body: "${1:\"${2:key}\"}: ${3:\"${4:val}\"}$0"
+  addToSet:
+    prefix: "add"
+    body: "{$addToSet: {$0}}"
+  all:
+    prefix: "all"
+    body: "{$all: [$0]}"
+  connect:
+    prefix: "connect"
+    body: "db = connect(\"${1:localhost}:${2:27017}/${3:mydb}\");$0"
+  each:
+    prefix: "ea"
+    body: "{$each: [$0]}"
+  elemMatch:
+    prefix: "elem"
+    body: "{$elemMatch: {$0}}"
+  exists:
+    prefix: "exists"
+    body: "{$exists: ${1:true|false}}$0"
+  forEach:
+    prefix: "fe"
+    body: "forEach(function(${1:x}) {$0})"
+  gt:
+    prefix: "gt"
+    body: "{$gt: $0}"
+  gte:
+    prefix: "gte"
+    body: "{$gte: $0}"
+  in:
+    prefix: "in"
+    body: "{$in: [$0]}"
+  inc:
+    prefix: "inc"
+    body: "{$inc: {$0}}"
+  lt:
+    prefix: "lt"
+    body: "{$lt: $0}"
+  lte:
+    prefix: "lte"
+    body: "{$lte: $0}"
+  mod:
+    prefix: "mod"
+    body: "{$mod: [${1:divisor}, ${2:remainder}]}"
+  ne:
+    prefix: "ne"
+    body: "{$ne: $0}"
+  nin:
+    prefix: "nin"
+    body: "{$nin: [$0]}"
+  nor:
+    prefix: "nor"
+    body: "{$nor: [$0]}"
+  not:
+    prefix: "not"
+    body: "{$not: $0}"
+  or:
+    prefix: "or"
+    body: "{$or: [$0]}"
+  pop:
+    prefix: "pop"
+    body: "{$pop: $0}"
+  printjson:
+    prefix: "pj"
+    body: "printjson($0);"
+  pull:
+    prefix: "pull"
+    body: "{$pull: $0}"
+  pullAll:
+    prefix: "pullAll"
+    body: "{$pullAll: {${1:\"${2:key}\"}: [$3]}}"
+  push:
+    prefix: "push"
+    body: "{$push: $0}"
+  pushAll:
+    prefix: "pushAll"
+    body: "{$pushAll: {${1:\"${2:key}\"}: [$3]}}"
+  set:
+    prefix: "set"
+    body: "{$set: {$0}}"
+  size:
+    prefix: "size"
+    body: "{$size: $0}"
+  type:
+    prefix: "type"
+    body: "{$type: $0}"
+  unset:
+    prefix: "unset"
+    body: "{$unset: {$0}}"
