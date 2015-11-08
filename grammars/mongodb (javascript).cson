@@ -45,7 +45,7 @@ repository:
     match: "\"\\w+(\\.\\w+)*\""
     name: "string.quoted.double.js.mongodb"
   keywords:
-    match: "\\$(gt|lt|in|nin|all|mod|exists|type|elemMatch|not|where|or|inc|set|unset|push|pushAll|addToSet|each|pop|pull|pullAll|size|ne|gte|lte)\\s*:"
+    match: "\\$(gt|lt|in|nin|all|mod|exists|type|elemMatch|not|where|or|inc|set|unset|push|pushAll|addToSet|each|pop|pull|pullAll|size|ne|gte|lte|cond|if|then|else)\\s*:"
     name: "keyword.operator.js.mongodb"
   rawKeys:
     match: "\\w+(\\.\\w+)*\\s*:"
