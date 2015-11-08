@@ -8,7 +8,7 @@ name: "mongoDB (JavaScript)"
 patterns: [
   {
     begin: "\\.(update|find|findOne|findAndModify|remove|insert|aggregate)\\("
-    end: "\\)\\;"
+    end: "\\)[[^\s]+]*(\r\n|\n\r|\r|\n)+"
     patterns: [
       {
         include: "#keywords"
