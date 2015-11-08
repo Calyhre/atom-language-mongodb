@@ -7,8 +7,8 @@ foldingStopMarker: "^\\s*\\}"
 name: "mongoDB (JavaScript)"
 patterns: [
   {
-    begin: "\\{"
-    end: "\\}"
+    begin: "\\.(update|find|remove|insert)\\("
+    end: "\\)\\;"
     patterns: [
       {
         include: "#keywords"
