@@ -8,7 +8,7 @@ name: "mongoDB (JavaScript)"
 patterns: [
   {
     begin: "\\.(update|find|findOne|findAndModify|remove|insert|aggregate)\\("
-    end: "\\)[[^\s]+]*(\r\n|\n\r|\r|\n)+"
+    end: "(\\)\\.|\\)\\;|\\)(\r\n|\n\r|\r|\n))+"
     patterns: [
       {
         include: "#keywords"
@@ -48,7 +48,7 @@ repository:
     match: "(\\$(gt|lt|in|nin|all|mod|exists|type|elemMatch|not|where|or|inc|set|unset|push|pushAll|addToSet|each|pop|pull|pullAll|size|ne|gte|lte|cond|dateToString|if|ifNull)\\s*|if|then|else):"
     name: "keyword.operator.js.mongodb"
   rawKeys:
-    match: "\\w+(\\.\\w+)*\\s*:"
+    match: "[\\sa-zA-Z0-9_]*\\s*\:"
     name: "keyword.other.js.mongodb"
   singleQuotedKeys:
     match: "'\\w+(\\.\\w+)*'"
